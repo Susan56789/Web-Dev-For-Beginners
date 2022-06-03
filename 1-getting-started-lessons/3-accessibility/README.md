@@ -4,13 +4,14 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
+
 [Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/5)
 
 > The power of the Web is in its universality. Access by everyone regardless of disability is an essential aspect.
 >
 > \- Sir Timothy Berners-Lee, W3C Director and inventor of the World Wide Web
 
-This quote perfectly highlights the importance of creating accessible websites. An application that can't be accessed by all is by definition exclusionary. As web developers we should always have accessibility in mind. By having this focus from the beginning you will be well on your way to ensure everyone can access the pages you create. In this lesson, you'll learn about the tools that can help you ensure that your web assets are accessible and how to build with accessibility in mind. 
+This quote perfectly highlights the importance of creating accessible websites. An application that can't be accessed by all is by definition exclusionary. As web developers we should always have accessibility in mind. By having this focus from the beginning you will be well on your way to ensure everyone can access the pages you create. In this lesson, you'll learn about the tools that can help you ensure that your web assets are accessible and how to build with accessibility in mind.
 
 > You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101/accessibility?WT.mc_id=academic-13441-cxa)!
 
@@ -87,9 +88,7 @@ Hyperlinks are core to navigating the web. As a result, ensuring a screen reader
 As you would expect, screen readers read link text in the same way they'd read any other text on the page. With this in mind, the text demonstrated below might feel perfectly acceptable.
 
 > The little penguin, sometimes known as the fairy penguin, is the smallest penguin in the world. [Click here](https://en.wikipedia.org/wiki/Little_penguin) for more information.
-
-> The little penguin, sometimes known as the fairy penguin, is the smallest penguin in the world. Visit https://en.wikipedia.org/wiki/Little_penguin for more information.
-
+> The little penguin, sometimes known as the fairy penguin, is the smallest penguin in the world. Visit <https://en.wikipedia.org/wiki/Little_penguin> for more information.
 > **NOTE** As you're about to read, you should **never** create links which look like the above.
 
 Remember, screen readers are a different interface from browsers with a different set of features.
@@ -218,6 +217,7 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 ```
 
 ## Post-Lecture Quiz
+
 [Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/6)
 
 ## Review & Self Study
@@ -225,7 +225,7 @@ Take this HTML and rewrite it to be as accessible as possible, given the strateg
 Many governments have laws regarding accessibility requirements. Read up on your home country's accessibility laws. What is covered, and what isn't? An example is [this government web site](https://accessibility.blog.gov.uk/).
 
 ## Assignment
- 
+
 [Analyze a non-accessible web site](assignment.md)
 
 Credits: [Turtle Ipsum](https://github.com/Instrument/semantic-html-sample) by Instrument
