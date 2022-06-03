@@ -4,6 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
+
 [Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/7)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web.
@@ -17,6 +18,7 @@ This lesson covers the basics of JavaScript, the language that provides interact
 > 🎥 Click the images above for videos about variables and data types
 
 Let's start with variables and the data types that populate them!
+
 ## Variables
 
 Variables store values that can be used and changed throughout your code.
@@ -26,6 +28,7 @@ Creating and **declaring** a variable has the following syntax **[keyword] [name
 - **Keyword**. Keywords can be `let` or `var`.  
 
 ✅ The keyword `let` was introduced in ES6 and gives your variable a so called _block scope_. It's recommended that you use `let` over `var`. We will cover block scopes more in depth in future parts.
+
 - **The variable name**, this is a name you choose yourself.
 
 ### Task - working with variables
@@ -46,7 +49,7 @@ Creating and **declaring** a variable has the following syntax **[keyword] [name
 
    > Note: the use of `=` in this lesson means we make use of an "assignment operator", used to set a value to a variable. It doesn't denote equality.
 
-   `myVariable` has now been *initialized* with the value 123.
+   `myVariable` has now been _initialized_ with the value 123.
 
 1. **Refactor**. Replace your code with the following statement.
 
@@ -78,22 +81,22 @@ Constants are similar to variables, with two exceptions:
 
 - **Must have a value**. Constants must be initialized, or an error will occur when running code.
 - **Reference cannot be changed**. The reference of a constant cannot be changed once initialized, or an error will occur when running code. Let's look at two examples:
-   - **Simple value**. The following is NOT allowed:
-   
+  - **Simple value**. The following is NOT allowed:
+
       ```javascript
       const PI = 3;
       PI = 4; // not allowed
       ```
- 
-   - **Object reference is protected**. The following is NOT allowed.
-   
+
+  - **Object reference is protected**. The following is NOT allowed.
+
       ```javascript
       const obj = { a: 3 };
       obj = { b: 5 } // not allowed
       ```
 
-    - **Object value is not protected**. The following IS allowed:
-    
+  - **Object value is not protected**. The following IS allowed:
+
       ```javascript
       const obj = { a: 3 };
       obj.a = 5;  // allowed
@@ -189,6 +192,7 @@ Booleans can be only two values: `true` or `false`. Booleans can help make decis
 JavaScript is notorious for its surprising ways of handling datatypes on occasion. Do a bit of research on these 'gotchas'. For example: case sensitivity can bite! Try this in your console: `let age = 1; let Age = 2; age == Age` (resolves `false` -- why?). What other gotchas can you find?
 
 ## Post-Lecture Quiz
+
 [Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/8)
 
 ## Review & Self Study
