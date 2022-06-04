@@ -4,6 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
+
 [Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/11)
 
 Making decisions and controlling the order in which your code runs makes your code reusable and robust. This section covers the syntax for controlling data flow in JavaScript and its significance when used with Boolean data types
@@ -11,8 +12,8 @@ Making decisions and controlling the order in which your code runs makes your co
 [![Making Decisions](https://img.youtube.com/vi/SxTp8j-fMMY/0.jpg)](https://youtube.com/watch?v=SxTp8j-fMMY "Making Decisions")
 
 > 🎥 Click the image above for a video about making decisions.
-
 > You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-if-else/?WT.mc_id=academic-13441-cxa)!
+
 ## A Brief Recap on Booleans
 
 Booleans can be only two values: `true` or `false`. Booleans help make decisions on which lines of code should run when certain conditions are met.
@@ -140,10 +141,11 @@ let biggestNumber = firstNumber > secondNumber ? firstNumber: secondNumber;
 
 ✅ Take a minute to read this code a few times. Do you understand how these operators are working?
 
-The above states that 
-- if `firstNumber` is larger than `secondNumber` 
-- then assign `firstNumber` to `biggestNumber` 
-- else assign `secondNumber`. 
+The above states that
+
+- if `firstNumber` is larger than `secondNumber`
+- then assign `firstNumber` to `biggestNumber`
+- else assign `secondNumber`.
   
 The ternary expression is just a compact way of writing the code below:
 
@@ -163,7 +165,9 @@ if (firstNumber > secondNumber) {
 Create a program that is written first with logical operators, and then rewrite it using a ternary expression. What's your preferred syntax?
 
 ---
+
 ## Post-Lecture Quiz
+
 [Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/12)
 
 ## Review & Self Study
