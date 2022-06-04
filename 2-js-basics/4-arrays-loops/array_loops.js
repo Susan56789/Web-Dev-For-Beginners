@@ -1,0 +1,13 @@
+let numbers = [
+  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+];
+let length = numbers.length;
+for (let i = 1; i < length; i++) {
+  let x = [i];
+
+  x.forEach((a) => {
+    if (a % 3 == 0) {
+      console.log(a);
+    }
+  });
+}

@@ -4,6 +4,7 @@
 > Sketchnote by [Tomomi Imura](https://twitter.com/girlie_mac)
 
 ## Pre-Lecture Quiz
+
 [Pre-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/13)
 
 This lesson covers the basics of JavaScript, the language that provides interactivity on the web. In this lesson, you'll learn about arrays and loops, which are used to manipulate data.
@@ -13,7 +14,6 @@ This lesson covers the basics of JavaScript, the language that provides interact
 [![Loops](https://img.youtube.com/vi/Eeh7pxtTZ3k/0.jpg)](https://www.youtube.com/watch?v=Eeh7pxtTZ3k "Loops")
 
 > 🎥 Click the images above for videos about arrays and loops.
-
 > You can take this lesson on [Microsoft Learn](https://docs.microsoft.com/learn/modules/web-development-101-arrays/?WT.mc_id=academic-13441-cxa)!
 
 ## Arrays
@@ -73,6 +73,7 @@ Loops allow for repetitive or **iterative** tasks, and can save a lot of time an
 ### For Loop
 
 The `for` loop requires 3 parts to iterate:
+
 - `counter` A variable that is typically initialized with a number that counts the number of iterations
 - `condition` Expression that uses comparison operators to cause the loop to stop when `true`
 - `iteration-expression` Runs at the end of each iteration, typically used to change the counter value
@@ -113,7 +114,7 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 } //Ends when all flavors are printed
 ```
 
-✅ Experiment with looping over an array of your own making in your browser's console. 
+✅ Experiment with looping over an array of your own making in your browser's console.
 
 ---
 
@@ -122,8 +123,8 @@ for (let i = 0; i < iceCreamFlavors.length; i++) {
 There are other ways of looping over arrays other than for and while loops. There are [forEach](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach), [for-of](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/for...of), and [map](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/map). Rewrite your array loop using one of these techniques.
 
 ## Post-Lecture Quiz
-[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14)
 
+[Post-lecture quiz](https://happy-mud-02d95f10f.azurestaticapps.net/quiz/14)
 
 ## Review & Self Study
 
