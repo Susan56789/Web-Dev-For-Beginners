@@ -13,7 +13,7 @@ HTML, or HyperText Markup Language, is the 'skeleton' of the web. If CSS 'dresse
 
 In this lesson, we're going to use HTML to layout the 'skeleton' of our virtual terrarium's interface. It will have a title and three columns: a right and a left column where the draggable plants live, and a center area that will be the actual glass-looking terrarium. By the end of this lesson, you will be able to see the plants in the columns, but the interface will look a little strange; don't worry, in the next section you will add CSS styles to the interface to make it look better.
 
-### Task
+### Task1
 
 On your computer, create a folder called 'terrarium' and inside it, a file called 'index.html'. You can do this in Visual Studio Code after you create your terrarium folder by opening a new VS Code window, clicking 'open folder', and navigating to your new folder. Click the small 'file' button in the Explorer pane and create the new file:
 
@@ -22,6 +22,7 @@ On your computer, create a folder called 'terrarium' and inside it, a file calle
 Or
 
 Use these commands on your git bash:
+
 * `mkdir terrarium`
 * `cd terrarium`
 * `touch index.html`
@@ -39,7 +40,7 @@ The first line of an HTML file is its doctype. It's a little surprising that you
 
 The second line should be the `<html>` tag's opening tag, followed right now by its closing tag `</html>`. These tags are the root elements of your interface.
 
-### Task
+### Task2
 
 Add these lines at the top of your `index.html` file:
 
@@ -56,22 +57,22 @@ Add these lines at the top of your `index.html` file:
 
 The 'head' area of the HTML document includes crucial information about your web page, also known as [metadata](https://developer.mozilla.org/docs/Web/HTML/Element/meta). In our case, we tell the web server to which this page will be sent to be rendered, these four things:
 
--   the page's title
--   page metadata including:
-    -   the 'character set', telling about what character encoding is used in the page
-    -   browser information, including `x-ua-compatible` which indicates that the IE=edge browser is supported
-    -   information about how the viewport should behave when it is loaded. Setting the viewport to have an initial scale of 1 controls the zoom level when the page is first loaded.
+* the page's title
+* page metadata including:
+  * the 'character set', telling about what character encoding is used in the page
+  * browser information, including `x-ua-compatible` which indicates that the IE=edge browser is supported
+  * information about how the viewport should behave when it is loaded. Setting the viewport to have an initial scale of 1 controls the zoom level when the page is first loaded.
 
-### Task
+### Task3
 
 Add a 'head' block to your document in between the opening and closing `<html>` tags.
 
 ```html
 <head>
-	<title>Welcome to my Virtual Terrarium</title>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
+ <title>Welcome to my Virtual Terrarium</title>
+ <meta charset="utf-8" />
+ <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 ```
 
@@ -85,18 +86,18 @@ Add a 'head' block to your document in between the opening and closing `<html>` 
 
 In HTML, you add tags to your .html file to create elements of a web page. Each tag usually has an opening and closing tag, like this: `<p>hello</p>` to indicate a paragraph. Create your interface's body by adding a set of `<body>` tags inside the `<html>` tag pair; your markup now looks like this:
 
-### Task
+### Task4
 
 ```html
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Welcome to my Virtual Terrarium</title>
-		<meta charset="utf-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-	</head>
-	<body></body>
+ <head>
+  <title>Welcome to my Virtual Terrarium</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+ </head>
+ <body></body>
 </html>
 ```
 
@@ -108,58 +109,58 @@ One html tag that doesn't need a closing tag is the `<img>` tag, because it has 
 
 Create a folder in your app called `images` and in that, add all the images in the [source code folder](../solution/images); (there are 14 images of plants).
 
-### Task
+### Task5
 
 Add those plant images into two columns between the `<body></body>` tags:
 
 ```html
 <div id="page">
-	<div id="left-container" class="container">
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant2" src="./images/plant2.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant3" src="./images/plant3.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant4" src="./images/plant4.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant5" src="./images/plant5.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant6" src="./images/plant6.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant7" src="./images/plant7.png" />
-		</div>
-	</div>
-	<div id="right-container" class="container">
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant8" src="./images/plant8.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant9" src="./images/plant9.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant10" src="./images/plant10.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant11" src="./images/plant11.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant12" src="./images/plant12.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant13" src="./images/plant13.png" />
-		</div>
-		<div class="plant-holder">
-			<img class="plant" alt="plant" id="plant14" src="./images/plant14.png" />
-		</div>
-	</div>
+ <div id="left-container" class="container">
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant2" src="./images/plant2.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant3" src="./images/plant3.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant4" src="./images/plant4.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant5" src="./images/plant5.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant6" src="./images/plant6.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant7" src="./images/plant7.png" />
+  </div>
+ </div>
+ <div id="right-container" class="container">
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant8" src="./images/plant8.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant9" src="./images/plant9.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant10" src="./images/plant10.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant11" src="./images/plant11.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant12" src="./images/plant12.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant13" src="./images/plant13.png" />
+  </div>
+  <div class="plant-holder">
+   <img class="plant" alt="plant" id="plant14" src="./images/plant14.png" />
+  </div>
+ </div>
 </div>
 ```
 
@@ -191,19 +192,19 @@ Using semantic markup such as having headers be `<h1>` and unordered lists be re
 
 The last part of this interface involves creating markup that will be styled to create a terrarium.
 
-### Task:
+### Task6
 
 Add this markup above the last `</div>` tag:
 
 ```html
 <div id="terrarium">
-	<div class="jar-top"></div>
-	<div class="jar-walls">
-		<div class="jar-glossy-long"></div>
-		<div class="jar-glossy-short"></div>
-	</div>
-	<div class="dirt"></div>
-	<div class="jar-bottom"></div>
+ <div class="jar-top"></div>
+ <div class="jar-walls">
+  <div class="jar-glossy-long"></div>
+  <div class="jar-glossy-short"></div>
+ </div>
+ <div class="dirt"></div>
+ <div class="jar-bottom"></div>
 </div>
 ```
 
@@ -224,7 +225,6 @@ There are some wild 'older' tags in HTML that are still fun to play with, though
 HTML is the 'tried and true' building block system that has helped build the web into what it is today. Learn a little about its history by studying some old and new tags. Can you figure out why some tags were deprecated and some added? What tags might be introduced in the future?
 
 Learn more about building sites for the web and mobile devices at [Microsoft Learn](https://docs.microsoft.com/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa).
-
 
 ## Assignment
 

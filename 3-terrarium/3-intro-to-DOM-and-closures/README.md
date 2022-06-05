@@ -29,12 +29,12 @@ In this lesson, we will complete our interactive terrarium project by creating t
 
 You should have the HTML and CSS for your terrarium built. By the end of this lesson you will be able to move the plants into and out of the terrarium by dragging them.
 
-### Task
+### Task1
 
 In your terrarium folder, create a new file called `script.js`. Import that file in the `<head>` section:
 
 ```html
-	<script src="./script.js" defer></script>
+<script src="./script.js" defer></script>
 ```
 
 > Note: use `defer` when importing an external JavaScript file into the html file so as to allow the JavaScript to execute only after the HTML file has been fully loaded. You could also use the `async` attribute, which allows the script to execute while the HTML file is parsing, but in our case, it's important to have the HTML elements fully available for dragging before we allow the drag script to be executed.
@@ -44,7 +44,7 @@ In your terrarium folder, create a new file called `script.js`. Import that file
 
 The first thing you need to do is to create references to the elements that you want to manipulate in the DOM. In our case, they are the 14 plants currently waiting in the side bars.
 
-### Task
+### Task2
 
 ```html
 dragElement(document.getElementById('plant1'));
@@ -71,38 +71,38 @@ What's going on here? You are referencing the document and looking through its D
 
 ## The Closure
 
-Now you are ready to create the dragElement closure, which is an outer function that encloses an inner function or functions (in our case, we will have three). 
+Now you are ready to create the dragElement closure, which is an outer function that encloses an inner function or functions (in our case, we will have three).
 
 Closures are useful when one or more functions need to access an outer function's scope. Here's an example:
 
 ```javascript
 function displayCandy(){
-	let candy = ['jellybeans'];
-	function addCandy(candyType) {
-		candy.push(candyType)
-	}
-	addCandy('gumdrops');
+ let candy = ['jellybeans'];
+ function addCandy(candyType) {
+  candy.push(candyType)
+ }
+ addCandy('gumdrops');
 }
 displayCandy();
 console.log(candy)
 ```
 
-In this example, the displayCandy function surrounds a function that pushes a new candy type into an array that already exists in the function. If you were to run this code, the `candy` array would be undefined, as it is a local variable (local to the closure). 
+In this example, the displayCandy function surrounds a function that pushes a new candy type into an array that already exists in the function. If you were to run this code, the `candy` array would be undefined, as it is a local variable (local to the closure).
 
 ✅ How can you make the `candy` array accessible? Try moving it outside the closure. This way, the array becomes global, rather than remaining only available to the closure's local scope.
 
-### Task
+### Task3
 
 Under the element declarations in `script.js`, create a function:
 
 ```javascript
 function dragElement(terrariumElement) {
-	//set 4 positions for positioning on the screen
-	let pos1 = 0,
-		pos2 = 0,
-		pos3 = 0,
-		pos4 = 0;
-	terrariumElement.onpointerdown = pointerDrag;
+ //set 4 positions for positioning on the screen
+ let pos1 = 0,
+  pos2 = 0,
+  pos3 = 0,
+  pos4 = 0;
+ terrariumElement.onpointerdown = pointerDrag;
 }
 ```
 
@@ -118,14 +118,14 @@ In addition, the terrariumElement that is passed to this function is assigned a 
 
 The terrariumElement is ready to be dragged around; when the `onpointerdown` event is fired, the function pointerDrag is invoked. Add that function right under this line: `terrariumElement.onpointerdown = pointerDrag;`:
 
-### Task 
+### Task4
 
 ```javascript
 function pointerDrag(e) {
-	e.preventDefault();
-	console.log(e);
-	pos3 = e.clientX;
-	pos4 = e.clientY;
+ e.preventDefault();
+ console.log(e);
+ pos3 = e.clientX;
+ pos4 = e.clientY;
 }
 ```
 
@@ -145,43 +145,45 @@ Complete the initial function by adding two more pointer event manipulations und
 document.onpointermove = elementDrag;
 document.onpointerup = stopElementDrag;
 ```
+
 Now you are indicating that you want the plant to be dragged along with the pointer as you move it, and for the dragging gesture to stop when you deselect the plant. `onpointermove` and `onpointerup` are all parts of the same API as `onpointerdown`. The interface will throw errors now as you have not yet defined the `elementDrag` and the `stopElementDrag` functions, so build those out next.
 
 ## The elementDrag and stopElementDrag functions
 
 You will complete your closure by adding two more internal functions that will handle what happens when you drag a plant and stop dragging it. The behavior you want is that you can drag any plant at any time and place it anywhere on the screen. This interface is quite un-opinionated (there is no drop zone for example) to allow you to design your terrarium exactly as you like it by adding, removing, and repositioning plants.
 
-### Task
+### Task5
 
 Add the `elementDrag` function right after the closing curly bracket of `pointerDrag`:
 
 ```javascript
 function elementDrag(e) {
-	pos1 = pos3 - e.clientX;
-	pos2 = pos4 - e.clientY;
-	pos3 = e.clientX;
-	pos4 = e.clientY;
-	console.log(pos1, pos2, pos3, pos4);
-	terrariumElement.style.top = terrariumElement.offsetTop - pos2 + 'px';
-	terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
+ pos1 = pos3 - e.clientX;
+ pos2 = pos4 - e.clientY;
+ pos3 = e.clientX;
+ pos4 = e.clientY;
+ console.log(pos1, pos2, pos3, pos4);
+ terrariumElement.style.top = terrariumElement.offsetTop - pos2 + 'px';
+ terrariumElement.style.left = terrariumElement.offsetLeft - pos1 + 'px';
 }
 ```
+
 In this function, you do a lot of editing of the initial positions 1-4 that you set as local variables in the outer function. What's going on here?
 
 As you drag, you reassign `pos1` by making it equal to `pos3` (which you set earlier as `e.clientX`)  minus the current `e.clientX` value. You do a similar operation to `pos2`. Then, you reset `pos3` and `pos4` to the new X and Y coordinates of the element. You can watch these changes in the console as you drag. Then, you manipulate the plant's css style to set its new position based on the new positions of `pos1` and `pos2`, calculating the plant's top and left X and Y coordinates based on comparing its offset with these new positions.
 
-> `offsetTop` and `offsetLeft` are CSS properties that set an element's position based on that of its parent; its parent can be any element that is not positioned as `static`. 
+> `offsetTop` and `offsetLeft` are CSS properties that set an element's position based on that of its parent; its parent can be any element that is not positioned as `static`.
 
 All this recalculation of positioning allows you to fine-tune the behavior of the terrarium and its plants.
 
-### Task 
+### Task6
 
 The final task to complete the interface is to add the `stopElementDrag` function after the closing curly bracket of `elementDrag`:
 
 ```javascript
 function stopElementDrag() {
-	document.onpointerup = null;
-	document.onpointermove = null;
+ document.onpointerup = null;
+ document.onpointermove = null;
 }
 ```
 
@@ -214,4 +216,3 @@ Always check browser capabilities using [CanIUse.com](https://caniuse.com/).
 ## Assignment
 
 [Work a bit more with the DOM](assignment.md)
-

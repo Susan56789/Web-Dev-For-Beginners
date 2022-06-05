@@ -19,7 +19,7 @@ In this lesson, we're going to add styles to our online terrarium and learn more
 
 You should have the HTML for your terrarium built and ready to be styled.
 
-### Task
+### Task1
 
 In your terrarium folder, create a new file called `style.css`. Import that file in the `<head>` section:
 
@@ -33,7 +33,7 @@ In your terrarium folder, create a new file called `style.css`. Import that file
 
 Cascading Style Sheets incorporate the idea that the styles 'cascade' such that the application of a style is guided by its priority. Styles set by a web site author take priority over those set by a browser. Styles set 'inline' take priority over those set in an external style sheet.
 
-### Task
+### Task2
 
 Add the inline style "color: red" to your `<h1>` tag:
 
@@ -57,13 +57,13 @@ h1 {
 
 Styles are inherited from an ancestor style to a descendent, such that nested elements inherit the styles of their parents.
 
-### Task
+### Task3
 
 Set the body's font to a given font, and check to see a nested element's font:
 
 ```CSS
 body {
-	font-family: helvetica, arial, sans-serif;
+ font-family: helvetica, arial, sans-serif;
 }
 ```
 
@@ -83,12 +83,12 @@ So far, your `style.css` file has only a few tags styled, and the app looks pret
 
 ```CSS
 body {
-	font-family: helvetica, arial, sans-serif;
+ font-family: helvetica, arial, sans-serif;
 }
 
 h1 {
-	color: #3a241d;
-	text-align: center;
+ color: #3a241d;
+ text-align: center;
 }
 ```
 
@@ -100,23 +100,23 @@ Add some style to layout the left and right containers. Since there is only one 
 
 ```CSS
 #left-container {
-	background-color: #eee;
-	width: 15%;
-	left: 0px;
-	top: 0px;
-	position: absolute;
-	height: 100%;
-	padding: 10px;
+ background-color: #eee;
+ width: 15%;
+ left: 0px;
+ top: 0px;
+ position: absolute;
+ height: 100%;
+ padding: 10px;
 }
 
 #right-container {
-	background-color: #eee;
-	width: 15%;
-	right: 0px;
-	top: 0px;
-	position: absolute;
-	height: 100%;
-	padding: 10px;
+ background-color: #eee;
+ width: 15%;
+ right: 0px;
+ top: 0px;
+ position: absolute;
+ height: 100%;
+ padding: 10px;
 }
 ```
 
@@ -136,7 +136,7 @@ Notice that each plant in the HTML markup has a combination of ids and classes. 
 
 ```html
 <div class="plant-holder">
-	<img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
+ <img class="plant" alt="plant" id="plant1" src="./images/plant1.png" />
 </div>
 ```
 
@@ -144,16 +144,16 @@ Add the following to your `style.css` file:
 
 ```CSS
 .plant-holder {
-	position: relative;
-	height: 13%;
-	left: -10px;
+ position: relative;
+ height: 13%;
+ left: -10px;
 }
 
 .plant {
-	position: absolute;
-	max-width: 150%;
-	max-height: 150%;
-	z-index: 2;
+ position: absolute;
+ max-width: 150%;
+ max-height: 150%;
+ z-index: 2;
 }
 ```
 
@@ -191,48 +191,48 @@ First, style the `.terrarium` div children as a rounded rectangle using CSS:
 
 ```CSS
 .jar-walls {
-	height: 80%;
-	width: 60%;
-	background: #d1e1df;
-	border-radius: 1rem;
-	position: absolute;
-	bottom: 0.5%;
-	left: 20%;
-	opacity: 0.5;
-	z-index: 1;
+ height: 80%;
+ width: 60%;
+ background: #d1e1df;
+ border-radius: 1rem;
+ position: absolute;
+ bottom: 0.5%;
+ left: 20%;
+ opacity: 0.5;
+ z-index: 1;
 }
 
 .jar-top {
-	width: 50%;
-	height: 5%;
-	background: #d1e1df;
-	position: absolute;
-	bottom: 80.5%;
-	left: 25%;
-	opacity: 0.7;
-	z-index: 1;
+ width: 50%;
+ height: 5%;
+ background: #d1e1df;
+ position: absolute;
+ bottom: 80.5%;
+ left: 25%;
+ opacity: 0.7;
+ z-index: 1;
 }
 
 .jar-bottom {
-	width: 50%;
-	height: 1%;
-	background: #d1e1df;
-	position: absolute;
-	bottom: 0%;
-	left: 25%;
-	opacity: 0.7;
+ width: 50%;
+ height: 1%;
+ background: #d1e1df;
+ position: absolute;
+ bottom: 0%;
+ left: 25%;
+ opacity: 0.7;
 }
 
 .dirt {
-	width: 60%;
-	height: 5%;
-	background: #3a241d;
-	position: absolute;
-	border-radius: 0 0 1rem 1rem;
-	bottom: 1%;
-	left: 20%;
-	opacity: 0.7;
-	z-index: -1;
+ width: 60%;
+ height: 5%;
+ background: #3a241d;
+ position: absolute;
+ border-radius: 0 0 1rem 1rem;
+ bottom: 1%;
+ left: 20%;
+ opacity: 0.7;
+ z-index: -1;
 }
 ```
 
